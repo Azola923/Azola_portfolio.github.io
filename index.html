@@ -196,7 +196,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px and 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
         }
         
@@ -230,58 +230,50 @@
             margin-bottom: 0.5rem;
         }
         
-        /* Contact Section */
-        .contact-container {
+        /* Experience & Certifications Section */
+        .exp-cert-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
         
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        .exp-cert-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        .exp-cert-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
         }
         
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .exp-cert-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
         }
         
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+        .exp-cert-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
         
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+        .exp-cert-org {
+            color: var(--primary);
+            font-weight: 500;
         }
         
-        input, textarea {
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
+        .exp-cert-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin: 0.3rem 0;
         }
         
-        textarea {
-            min-height: 150px;
-            resize: vertical;
+        .exp-cert-desc {
+            margin-top: 0.5rem;
         }
         
         /* Footer */
@@ -320,7 +312,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .about-content, 
-            .contact-container {
+            .exp-cert-container {
                 grid-template-columns: 1fr;
             }
             
@@ -346,7 +338,7 @@
             <p>IT Support Specialist/ Network Engineer & AI/ML Enthusiast</p>
             <div style="margin-top: 1.5rem;">
                 <a href="#projects" class="btn">View My Work</a>
-                <a href="#contact" class="btn btn-outline" style="margin-left: 1rem;">Contact Me</a>
+                <a href="#experience" class="btn btn-outline" style="margin-left: 1rem;">Experience & Certifications</a>
             </div>
         </div>
     </header>
@@ -360,7 +352,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#experience">Experience & Certifications</a></li>
             </ul>
         </div>
     </nav>
@@ -578,40 +570,44 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" style="background-color: #f8f9fa;">
+    <!-- Experience & Certifications Section -->
+    <section id="experience" style="background-color: #f8f9fa;">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+            <h2 class="section-title">Experience & Certifications</h2>
+            <div class="exp-cert-container">
+                <div class="exp-cert-card">
+                    <h3>Experience</h3>
+                    <div class="exp-cert-item">
+                        <div class="exp-cert-title">IT Support Associate</div>
+                        <div class="exp-cert-org">CAPACITI | Gqeberha, Eastern Cape</div>
+                        <div class="exp-cert-date">May 2025 – Present</div>
+                        <div class="exp-cert-desc">
+                            <ul>
+                                <li>Participated in AI bootcamp, gaining hands-on experience in building and developing applications.</li>
+                                <li>Completed certified Professional & IT Support courses through Coursera.</li>
+                            </ul>
                         </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>zollaxabadiiya@gmail.com</p>
+                    </div>
+                    <div class="exp-cert-item">
+                        <div class="exp-cert-title">Peer Helper</div>
+                        <div class="exp-cert-org">Walter Sisulu University | East London, Eastern Cape</div>
+                        <div class="exp-cert-date">April 2024 - November 2024</div>
+                        <div class="exp-cert-desc">
+                            <p>As a Peer Helper, I supported fellow students by offering guidance, active listening, and encouragement. I helped create a positive, inclusive environment by assisting others in navigating academic, social, and personal challenges with empathy and understanding.</p>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h3>Send Me a Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your Name">
+                
+                <div class="exp-cert-card">
+                    <h3>Certifications</h3>
+                    <div class="exp-cert-item">
+                        <div class="exp-cert-title">IT Support Professional Certificate</div>
+                        <div class="exp-cert-org">Coursera</div>
+                        <div class="exp-cert-desc">
+                            <p>Completed certified Professional & IT Support courses through Coursera.</p>
+                            <a href="https://coursera.org/share/153cb8a9106b1876eaaa3bac5a13a3ee" class="btn" style="margin-top: 0.5rem;">View Certificate</a>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Your Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -631,4 +627,3 @@
     </footer>
 </body>
 </html>
-
